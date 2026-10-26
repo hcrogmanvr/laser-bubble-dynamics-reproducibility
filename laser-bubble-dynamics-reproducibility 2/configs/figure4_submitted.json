@@ -1,0 +1,67 @@
+{
+  "source": "Code identified by the author as submitted Figure 4 source",
+  "parameters": {
+    "n_bubbles": 8,
+    "t_end": 0.001,
+    "dt": 1e-07,
+    "seed": 4,
+    "medium": null,
+    "cam": null,
+    "R0": 7e-07,
+    "R_min": 5e-08,
+    "R_max": 5e-05,
+    "Pin": 1.0,
+    "abs_frac": 0.25,
+    "E_tau": 8e-05,
+    "E_to_P": 350000000.0,
+    "P_cap": 2500000000.0,
+    "R_collapse": 1.8e-07,
+    "burst_frac": 0.7,
+    "rebound_factor": 0.6,
+    "k_couple": 0.12,
+    "r0": 8e-06,
+    "a_clip": 200000000000000.0,
+    "v_frac_c": 0.8
+  },
+  "medium": {
+    "rho": 1000.0,
+    "mu": 0.001,
+    "sigma": 0.072,
+    "c_sound": 1500.0,
+    "P_inf": 100000.0
+  },
+  "camera": {
+    "tau": 8e-06,
+    "gain": 0.002,
+    "saturate": 1.0
+  },
+  "samples": 10001,
+  "total_burst_flags": 8,
+  "event_rows": [
+    0
+  ],
+  "event_times_s": [
+    0.0
+  ],
+  "initial_assigned_radii_um": [
+    0.783023985129896,
+    0.5975421746870603,
+    0.6998274659787124,
+    0.6500448758539908,
+    0.7434488234576513,
+    0.5813886376376362,
+    0.680753116394429,
+    0.7117696839308217
+  ],
+  "min_saved_radius_um": 0.049999999999999996,
+  "max_saved_radius_um": 0.18,
+  "fraction_saved_radii_at_R_min": 0.9999000099990001,
+  "max_temperature_proxy_K": 300.04173692371813,
+  "max_drive_pressure_MPa": 0.005843204438744947,
+  "max_camera_signal": 0.0028,
+  "all_arrays_finite": true,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "matplotlib": "3.10.8",
+  "source_sha256": "a424560ba06d8bd09af659a2f8149f04cd0b4115f54b529a0ab63c54edbc87bd"
+}

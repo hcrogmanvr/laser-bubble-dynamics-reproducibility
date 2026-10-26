@@ -1,0 +1,393 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180mm" height="146.7mm" viewBox="0 0 2000 1630">
+<title>Laser-driven bubble model implementations and proposed extensions</title>
+<desc>Three separate implemented source-model variants, with diagnostic-only optical fractions distinguished from feedback and proposed physical extensions shown with dashed outlines.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#536578"/></marker></defs>
+<rect width="2000" height="1630" fill="white"/>
+<text x="44" y="43" font-family="Arial" font-size="31" font-weight="bold" fill="#172B3D" text-anchor="start">Experimental motivation</text>
+<text x="44" y="85" font-family="Arial" font-size="29" font-weight="normal" fill="#172B3D" text-anchor="start">1064 nm irradiation of Fe₃O₄ beads in liquid</text>
+<text x="44" y="124" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Observed dark-region growth, contraction and episodic optical emission</text>
+<line x1="1470" y1="41" x2="1537" y2="41" stroke="#536578" stroke-width="3"/>
+<text x="1555" y="50" font-family="Arial" font-size="25" font-weight="normal" fill="#172B3D" text-anchor="start">Implemented proxy</text>
+<line x1="1470" y1="84" x2="1480" y2="84" stroke="#75818C" stroke-width="3"/>
+<line x1="1487" y1="84" x2="1497" y2="84" stroke="#75818C" stroke-width="3"/>
+<line x1="1504" y1="84" x2="1514" y2="84" stroke="#75818C" stroke-width="3"/>
+<line x1="1521" y1="84" x2="1531" y2="84" stroke="#75818C" stroke-width="3"/>
+<text x="1555" y="93" font-family="Arial" font-size="25" font-weight="normal" fill="#172B3D" text-anchor="start">Further physics / tests</text>
+<rect x="44" y="162" width="1912" height="53" rx="8" fill="#EFF7FA" stroke="#156181" stroke-width="1.4"/>
+<text x="65" y="199" font-family="Arial" font-size="32" font-weight="bold" fill="#156181" text-anchor="start">A   Single-bubble source models (Figures 2–3)</text>
+<rect x="44" y="235" width="444" height="222" rx="12" fill="#EFF7FA" stroke="#156181" stroke-width="2"/>
+<text x="66" y="282" font-family="Arial" font-size="30" font-weight="bold" fill="#156181" text-anchor="start">Laser gate and energy</text>
+<text x="66" y="331" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">60 s ON / 30 s OFF</text>
+<text x="66" y="371" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Stored-energy proxy E</text>
+<text x="66" y="411" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Fig. 3 loading affects source</text>
+<line x1="496" y1="346" x2="515" y2="346" stroke="#536578" stroke-width="3"/>
+<polygon points="524,346 513,339 513,353" fill="#536578"/>
+<rect x="533" y="235" width="444" height="222" rx="12" fill="#EFF7FA" stroke="#156181" stroke-width="2"/>
+<text x="555" y="282" font-family="Arial" font-size="30" font-weight="bold" fill="#156181" text-anchor="start">Radial calculation</text>
+<text x="555" y="331" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Spring force and damping</text>
+<text x="555" y="371" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Energy-to-pressure mapping</text>
+<text x="555" y="411" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Radius and velocity clipped</text>
+<line x1="985" y1="346" x2="1004" y2="346" stroke="#536578" stroke-width="3"/>
+<polygon points="1013,346 1002,339 1002,353" fill="#536578"/>
+<rect x="1022" y="235" width="444" height="222" rx="12" fill="#EFF7FA" stroke="#156181" stroke-width="2"/>
+<text x="1044" y="282" font-family="Arial" font-size="30" font-weight="bold" fill="#156181" text-anchor="start">Event rule</text>
+<text x="1044" y="331" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">R &lt; R_c and v &lt; 0</text>
+<text x="1044" y="371" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Armed + 0.5 s cooldown</text>
+<text x="1044" y="411" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Rearm when R &gt; 1.2R_c</text>
+<line x1="1474" y1="346" x2="1493" y2="346" stroke="#536578" stroke-width="3"/>
+<polygon points="1502,346 1491,339 1491,353" fill="#536578"/>
+<rect x="1511" y="235" width="444" height="222" rx="12" fill="#EFF7FA" stroke="#156181" stroke-width="2"/>
+<text x="1533" y="282" font-family="Arial" font-size="30" font-weight="bold" fill="#156181" text-anchor="start">Flash and diagnostics</text>
+<text x="1533" y="331" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Assigned event energy</text>
+<text x="1533" y="371" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Exponential flash response</text>
+<text x="1533" y="411" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Fig. 3: T_diag and A_diag</text>
+<rect x="44" y="477" width="1912" height="72" rx="7" fill="#F8FBFD" stroke="#B4CEDB" stroke-width="1.3"/>
+<text x="66" y="507" font-family="Arial" font-size="27" font-weight="normal" fill="#172B3D" text-anchor="start">Figure 3 optics: τ = τ₀(1 + 4M_np),  T_diag = exp(−τ),  A_diag = 1 − T_diag</text>
+<text x="66" y="538" font-family="Arial" font-size="27" font-weight="bold" fill="#156181" text-anchor="start">These absorption-only fractions are diagnostics and do not enter the energy update.</text>
+<rect x="44" y="577" width="1912" height="53" rx="8" fill="#FFFAED" stroke="#8C5A14" stroke-width="1.4"/>
+<text x="65" y="614" font-family="Arial" font-size="32" font-weight="bold" fill="#8C5A14" text-anchor="start">B   Two-reservoir ensemble with logistic activation (Figure 5)</text>
+<rect x="44" y="650" width="444" height="222" rx="12" fill="#FFFAED" stroke="#8C5A14" stroke-width="2"/>
+<text x="66" y="697" font-family="Arial" font-size="30" font-weight="bold" fill="#8C5A14" text-anchor="start">Absorbed laser power</text>
+<text x="66" y="746" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">P_abs = L P_in f_abs(R)</text>
+<text x="66" y="786" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Effective local power scale</text>
+<text x="66" y="826" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">80 µs gate, 75% ON</text>
+<line x1="496" y1="761" x2="515" y2="761" stroke="#536578" stroke-width="3"/>
+<polygon points="524,761 513,754 513,768" fill="#536578"/>
+<rect x="533" y="650" width="444" height="222" rx="12" fill="#FFFAED" stroke="#8C5A14" stroke-width="2"/>
+<text x="555" y="697" font-family="Arial" font-size="30" font-weight="bold" fill="#8C5A14" text-anchor="start">Two thermal reservoirs</text>
+<text x="555" y="746" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Separate T_e, T_i balances</text>
+<text x="555" y="786" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Heating, exchange, cooling</text>
+<text x="555" y="826" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Logistic activation x_e(T_e)</text>
+<line x1="985" y1="761" x2="1004" y2="761" stroke="#536578" stroke-width="3"/>
+<polygon points="1013,761 1002,754 1002,768" fill="#536578"/>
+<rect x="1022" y="650" width="444" height="222" rx="12" fill="#FFFAED" stroke="#8C5A14" stroke-width="2"/>
+<text x="1044" y="697" font-family="Arial" font-size="30" font-weight="bold" fill="#8C5A14" text-anchor="start">Pressure and events*</text>
+<text x="1044" y="746" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Ideal-mixture drive pressure</text>
+<text x="1044" y="786" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Instantaneous coupling</text>
+<text x="1044" y="826" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Downward radius crossing</text>
+<line x1="1474" y1="761" x2="1493" y2="761" stroke="#536578" stroke-width="3"/>
+<polygon points="1502,761 1491,754 1491,768" fill="#536578"/>
+<rect x="1511" y="650" width="444" height="222" rx="12" fill="#FFFAED" stroke="#8C5A14" stroke-width="2"/>
+<text x="1533" y="697" font-family="Arial" font-size="30" font-weight="bold" fill="#8C5A14" text-anchor="start">Camera response</text>
+<text x="1533" y="746" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Burst photon-source proxy</text>
+<text x="1533" y="786" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">20 µs detector response</text>
+<text x="1533" y="826" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Saturation in arbitrary units</text>
+<text x="66" y="918" font-family="Arial" font-size="27" font-weight="normal" fill="#755121" text-anchor="start">T_e is a modeled reservoir temperature. T_i evolves internally. The source does not calculate a spectrum.</text>
+<rect x="44" y="952" width="1912" height="53" rx="8" fill="#F5F2FB" stroke="#63529A" stroke-width="1.4"/>
+<text x="65" y="989" font-family="Arial" font-size="32" font-weight="bold" fill="#63529A" text-anchor="start">C   Extended ensemble with Saha and loading feedback (Figure 6)</text>
+<rect x="44" y="1025" width="444" height="222" rx="12" fill="#F5F2FB" stroke="#63529A" stroke-width="2"/>
+<text x="66" y="1072" font-family="Arial" font-size="30" font-weight="bold" fill="#63529A" text-anchor="start">Loading feedback</text>
+<text x="66" y="1121" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Dimensionless M in [0, 10]</text>
+<text x="66" y="1161" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Absorption factor 1 + 0.25M</text>
+<text x="66" y="1201" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Pressure-driven loading law</text>
+<line x1="496" y1="1136" x2="515" y2="1136" stroke="#536578" stroke-width="3"/>
+<polygon points="524,1136 513,1129 513,1143" fill="#536578"/>
+<rect x="533" y="1025" width="444" height="222" rx="12" fill="#F5F2FB" stroke="#63529A" stroke-width="2"/>
+<text x="555" y="1072" font-family="Arial" font-size="30" font-weight="bold" fill="#63529A" text-anchor="start">Thermal and Saha</text>
+<text x="555" y="1121" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Separate T_e, T_i balances</text>
+<text x="555" y="1161" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Effective Saha x_ion(n,T_e)</text>
+<text x="555" y="1201" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Effective E_ion = 12.6 eV</text>
+<line x1="985" y1="1136" x2="1004" y2="1136" stroke="#536578" stroke-width="3"/>
+<polygon points="1013,1136 1002,1129 1002,1143" fill="#536578"/>
+<rect x="1022" y="1025" width="444" height="222" rx="12" fill="#F5F2FB" stroke="#63529A" stroke-width="2"/>
+<text x="1044" y="1072" font-family="Arial" font-size="30" font-weight="bold" fill="#63529A" text-anchor="start">Pressure interactions*</text>
+<text x="1044" y="1121" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Instantaneous coupling</text>
+<text x="1044" y="1161" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">t_arr = t_c + r/c_l</text>
+<text x="1044" y="1201" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">c_l = 1500 m/s; decay 3 µs</text>
+<line x1="1474" y1="1136" x2="1493" y2="1136" stroke="#536578" stroke-width="3"/>
+<polygon points="1502,1136 1491,1129 1491,1143" fill="#536578"/>
+<rect x="1511" y="1025" width="444" height="222" rx="12" fill="#F5F2FB" stroke="#63529A" stroke-width="2"/>
+<text x="1533" y="1072" font-family="Arial" font-size="30" font-weight="bold" fill="#63529A" text-anchor="start">Events and detector</text>
+<text x="1533" y="1121" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Radius-crossing trigger</text>
+<text x="1533" y="1161" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Emission factor 1 + 0.35⟨M⟩</text>
+<text x="1533" y="1201" font-family="Arial" font-size="28" font-weight="normal" fill="#172B3D" text-anchor="start">Camera in arbitrary units</text>
+<text x="66" y="1297" font-family="Arial" font-size="26" font-weight="normal" fill="#5F527A" text-anchor="start">Figures 3 and 6 include pressure-impulse or threshold damage indicators, without resolved membrane mechanics.</text>
+<text x="44" y="1355" font-family="Arial" font-size="31" font-weight="bold" fill="#52616E" text-anchor="start">Further physics and validation beyond these implementations</text>
+<rect x="44" y="1381" width="356" height="101" fill="#FAFBFC"/>
+<line x1="44" y1="1381" x2="54" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="61" y1="1381" x2="71" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="78" y1="1381" x2="88" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="95" y1="1381" x2="105" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="112" y1="1381" x2="122" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="129" y1="1381" x2="139" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="146" y1="1381" x2="156" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="163" y1="1381" x2="173" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="180" y1="1381" x2="190" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="197" y1="1381" x2="207" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="214" y1="1381" x2="224" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="231" y1="1381" x2="241" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="248" y1="1381" x2="258" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="265" y1="1381" x2="275" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="282" y1="1381" x2="292" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="299" y1="1381" x2="309" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="316" y1="1381" x2="326" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="333" y1="1381" x2="343" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="350" y1="1381" x2="360" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="367" y1="1381" x2="377" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="384" y1="1381" x2="394" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="44" y1="1482" x2="54" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="61" y1="1482" x2="71" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="78" y1="1482" x2="88" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="95" y1="1482" x2="105" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="112" y1="1482" x2="122" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="129" y1="1482" x2="139" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="146" y1="1482" x2="156" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="163" y1="1482" x2="173" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="180" y1="1482" x2="190" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="197" y1="1482" x2="207" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="214" y1="1482" x2="224" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="231" y1="1482" x2="241" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="248" y1="1482" x2="258" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="265" y1="1482" x2="275" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="282" y1="1482" x2="292" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="299" y1="1482" x2="309" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="316" y1="1482" x2="326" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="333" y1="1482" x2="343" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="350" y1="1482" x2="360" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="367" y1="1482" x2="377" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="384" y1="1482" x2="394" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="44" y1="1381" x2="44" y2="1391" stroke="#8A949D" stroke-width="2"/>
+<line x1="44" y1="1398" x2="44" y2="1408" stroke="#8A949D" stroke-width="2"/>
+<line x1="44" y1="1415" x2="44" y2="1425" stroke="#8A949D" stroke-width="2"/>
+<line x1="44" y1="1432" x2="44" y2="1442" stroke="#8A949D" stroke-width="2"/>
+<line x1="44" y1="1449" x2="44" y2="1459" stroke="#8A949D" stroke-width="2"/>
+<line x1="44" y1="1466" x2="44" y2="1476" stroke="#8A949D" stroke-width="2"/>
+<line x1="400" y1="1381" x2="400" y2="1391" stroke="#8A949D" stroke-width="2"/>
+<line x1="400" y1="1398" x2="400" y2="1408" stroke="#8A949D" stroke-width="2"/>
+<line x1="400" y1="1415" x2="400" y2="1425" stroke="#8A949D" stroke-width="2"/>
+<line x1="400" y1="1432" x2="400" y2="1442" stroke="#8A949D" stroke-width="2"/>
+<line x1="400" y1="1449" x2="400" y2="1459" stroke="#8A949D" stroke-width="2"/>
+<line x1="400" y1="1466" x2="400" y2="1476" stroke="#8A949D" stroke-width="2"/>
+<text x="222" y="1421" font-family="Arial" font-size="25" font-weight="normal" fill="#172B3D" text-anchor="middle">Interfacial evaporation</text>
+<text x="222" y="1456" font-family="Arial" font-size="25" font-weight="normal" fill="#172B3D" text-anchor="middle">and condensation</text>
+<rect x="433" y="1381" width="356" height="101" fill="#FAFBFC"/>
+<line x1="433" y1="1381" x2="443" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="450" y1="1381" x2="460" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="467" y1="1381" x2="477" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="484" y1="1381" x2="494" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="501" y1="1381" x2="511" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="518" y1="1381" x2="528" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="535" y1="1381" x2="545" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="552" y1="1381" x2="562" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="569" y1="1381" x2="579" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="586" y1="1381" x2="596" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="603" y1="1381" x2="613" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="620" y1="1381" x2="630" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="637" y1="1381" x2="647" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="654" y1="1381" x2="664" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="671" y1="1381" x2="681" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="688" y1="1381" x2="698" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="705" y1="1381" x2="715" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="722" y1="1381" x2="732" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="739" y1="1381" x2="749" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="756" y1="1381" x2="766" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="773" y1="1381" x2="783" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="433" y1="1482" x2="443" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="450" y1="1482" x2="460" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="467" y1="1482" x2="477" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="484" y1="1482" x2="494" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="501" y1="1482" x2="511" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="518" y1="1482" x2="528" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="535" y1="1482" x2="545" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="552" y1="1482" x2="562" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="569" y1="1482" x2="579" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="586" y1="1482" x2="596" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="603" y1="1482" x2="613" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="620" y1="1482" x2="630" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="637" y1="1482" x2="647" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="654" y1="1482" x2="664" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="671" y1="1482" x2="681" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="688" y1="1482" x2="698" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="705" y1="1482" x2="715" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="722" y1="1482" x2="732" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="739" y1="1482" x2="749" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="756" y1="1482" x2="766" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="773" y1="1482" x2="783" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="433" y1="1381" x2="433" y2="1391" stroke="#8A949D" stroke-width="2"/>
+<line x1="433" y1="1398" x2="433" y2="1408" stroke="#8A949D" stroke-width="2"/>
+<line x1="433" y1="1415" x2="433" y2="1425" stroke="#8A949D" stroke-width="2"/>
+<line x1="433" y1="1432" x2="433" y2="1442" stroke="#8A949D" stroke-width="2"/>
+<line x1="433" y1="1449" x2="433" y2="1459" stroke="#8A949D" stroke-width="2"/>
+<line x1="433" y1="1466" x2="433" y2="1476" stroke="#8A949D" stroke-width="2"/>
+<line x1="789" y1="1381" x2="789" y2="1391" stroke="#8A949D" stroke-width="2"/>
+<line x1="789" y1="1398" x2="789" y2="1408" stroke="#8A949D" stroke-width="2"/>
+<line x1="789" y1="1415" x2="789" y2="1425" stroke="#8A949D" stroke-width="2"/>
+<line x1="789" y1="1432" x2="789" y2="1442" stroke="#8A949D" stroke-width="2"/>
+<line x1="789" y1="1449" x2="789" y2="1459" stroke="#8A949D" stroke-width="2"/>
+<line x1="789" y1="1466" x2="789" y2="1476" stroke="#8A949D" stroke-width="2"/>
+<text x="611" y="1421" font-family="Arial" font-size="25" font-weight="normal" fill="#172B3D" text-anchor="middle">Compressible waves</text>
+<text x="611" y="1456" font-family="Arial" font-size="25" font-weight="normal" fill="#172B3D" text-anchor="middle">and jet formation</text>
+<rect x="822" y="1381" width="356" height="101" fill="#FAFBFC"/>
+<line x1="822" y1="1381" x2="832" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="839" y1="1381" x2="849" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="856" y1="1381" x2="866" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="873" y1="1381" x2="883" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="890" y1="1381" x2="900" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="907" y1="1381" x2="917" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="924" y1="1381" x2="934" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="941" y1="1381" x2="951" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="958" y1="1381" x2="968" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="975" y1="1381" x2="985" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="992" y1="1381" x2="1002" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1009" y1="1381" x2="1019" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1026" y1="1381" x2="1036" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1043" y1="1381" x2="1053" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1060" y1="1381" x2="1070" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1077" y1="1381" x2="1087" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1094" y1="1381" x2="1104" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1111" y1="1381" x2="1121" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1128" y1="1381" x2="1138" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1145" y1="1381" x2="1155" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1162" y1="1381" x2="1172" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="822" y1="1482" x2="832" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="839" y1="1482" x2="849" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="856" y1="1482" x2="866" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="873" y1="1482" x2="883" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="890" y1="1482" x2="900" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="907" y1="1482" x2="917" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="924" y1="1482" x2="934" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="941" y1="1482" x2="951" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="958" y1="1482" x2="968" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="975" y1="1482" x2="985" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="992" y1="1482" x2="1002" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1009" y1="1482" x2="1019" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1026" y1="1482" x2="1036" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1043" y1="1482" x2="1053" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1060" y1="1482" x2="1070" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1077" y1="1482" x2="1087" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1094" y1="1482" x2="1104" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1111" y1="1482" x2="1121" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1128" y1="1482" x2="1138" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1145" y1="1482" x2="1155" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1162" y1="1482" x2="1172" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="822" y1="1381" x2="822" y2="1391" stroke="#8A949D" stroke-width="2"/>
+<line x1="822" y1="1398" x2="822" y2="1408" stroke="#8A949D" stroke-width="2"/>
+<line x1="822" y1="1415" x2="822" y2="1425" stroke="#8A949D" stroke-width="2"/>
+<line x1="822" y1="1432" x2="822" y2="1442" stroke="#8A949D" stroke-width="2"/>
+<line x1="822" y1="1449" x2="822" y2="1459" stroke="#8A949D" stroke-width="2"/>
+<line x1="822" y1="1466" x2="822" y2="1476" stroke="#8A949D" stroke-width="2"/>
+<line x1="1178" y1="1381" x2="1178" y2="1391" stroke="#8A949D" stroke-width="2"/>
+<line x1="1178" y1="1398" x2="1178" y2="1408" stroke="#8A949D" stroke-width="2"/>
+<line x1="1178" y1="1415" x2="1178" y2="1425" stroke="#8A949D" stroke-width="2"/>
+<line x1="1178" y1="1432" x2="1178" y2="1442" stroke="#8A949D" stroke-width="2"/>
+<line x1="1178" y1="1449" x2="1178" y2="1459" stroke="#8A949D" stroke-width="2"/>
+<line x1="1178" y1="1466" x2="1178" y2="1476" stroke="#8A949D" stroke-width="2"/>
+<text x="1000" y="1421" font-family="Arial" font-size="25" font-weight="normal" fill="#172B3D" text-anchor="middle">Species kinetics and</text>
+<text x="1000" y="1456" font-family="Arial" font-size="25" font-weight="normal" fill="#172B3D" text-anchor="middle">ionization energy</text>
+<rect x="1211" y="1381" width="356" height="101" fill="#FAFBFC"/>
+<line x1="1211" y1="1381" x2="1221" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1228" y1="1381" x2="1238" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1245" y1="1381" x2="1255" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1262" y1="1381" x2="1272" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1279" y1="1381" x2="1289" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1296" y1="1381" x2="1306" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1313" y1="1381" x2="1323" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1330" y1="1381" x2="1340" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1347" y1="1381" x2="1357" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1364" y1="1381" x2="1374" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1381" y1="1381" x2="1391" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1398" y1="1381" x2="1408" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1415" y1="1381" x2="1425" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1432" y1="1381" x2="1442" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1449" y1="1381" x2="1459" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1466" y1="1381" x2="1476" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1483" y1="1381" x2="1493" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1500" y1="1381" x2="1510" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1517" y1="1381" x2="1527" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1534" y1="1381" x2="1544" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1551" y1="1381" x2="1561" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1211" y1="1482" x2="1221" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1228" y1="1482" x2="1238" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1245" y1="1482" x2="1255" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1262" y1="1482" x2="1272" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1279" y1="1482" x2="1289" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1296" y1="1482" x2="1306" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1313" y1="1482" x2="1323" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1330" y1="1482" x2="1340" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1347" y1="1482" x2="1357" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1364" y1="1482" x2="1374" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1381" y1="1482" x2="1391" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1398" y1="1482" x2="1408" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1415" y1="1482" x2="1425" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1432" y1="1482" x2="1442" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1449" y1="1482" x2="1459" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1466" y1="1482" x2="1476" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1483" y1="1482" x2="1493" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1500" y1="1482" x2="1510" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1517" y1="1482" x2="1527" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1534" y1="1482" x2="1544" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1551" y1="1482" x2="1561" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1211" y1="1381" x2="1211" y2="1391" stroke="#8A949D" stroke-width="2"/>
+<line x1="1211" y1="1398" x2="1211" y2="1408" stroke="#8A949D" stroke-width="2"/>
+<line x1="1211" y1="1415" x2="1211" y2="1425" stroke="#8A949D" stroke-width="2"/>
+<line x1="1211" y1="1432" x2="1211" y2="1442" stroke="#8A949D" stroke-width="2"/>
+<line x1="1211" y1="1449" x2="1211" y2="1459" stroke="#8A949D" stroke-width="2"/>
+<line x1="1211" y1="1466" x2="1211" y2="1476" stroke="#8A949D" stroke-width="2"/>
+<line x1="1567" y1="1381" x2="1567" y2="1391" stroke="#8A949D" stroke-width="2"/>
+<line x1="1567" y1="1398" x2="1567" y2="1408" stroke="#8A949D" stroke-width="2"/>
+<line x1="1567" y1="1415" x2="1567" y2="1425" stroke="#8A949D" stroke-width="2"/>
+<line x1="1567" y1="1432" x2="1567" y2="1442" stroke="#8A949D" stroke-width="2"/>
+<line x1="1567" y1="1449" x2="1567" y2="1459" stroke="#8A949D" stroke-width="2"/>
+<line x1="1567" y1="1466" x2="1567" y2="1476" stroke="#8A949D" stroke-width="2"/>
+<text x="1389" y="1421" font-family="Arial" font-size="25" font-weight="normal" fill="#172B3D" text-anchor="middle">Membrane mechanics</text>
+<text x="1389" y="1456" font-family="Arial" font-size="25" font-weight="normal" fill="#172B3D" text-anchor="middle">and material failure</text>
+<rect x="1600" y="1381" width="356" height="101" fill="#FAFBFC"/>
+<line x1="1600" y1="1381" x2="1610" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1617" y1="1381" x2="1627" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1634" y1="1381" x2="1644" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1651" y1="1381" x2="1661" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1668" y1="1381" x2="1678" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1685" y1="1381" x2="1695" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1702" y1="1381" x2="1712" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1719" y1="1381" x2="1729" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1736" y1="1381" x2="1746" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1753" y1="1381" x2="1763" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1770" y1="1381" x2="1780" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1787" y1="1381" x2="1797" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1804" y1="1381" x2="1814" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1821" y1="1381" x2="1831" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1838" y1="1381" x2="1848" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1855" y1="1381" x2="1865" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1872" y1="1381" x2="1882" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1889" y1="1381" x2="1899" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1906" y1="1381" x2="1916" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1923" y1="1381" x2="1933" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1940" y1="1381" x2="1950" y2="1381" stroke="#8A949D" stroke-width="2"/>
+<line x1="1600" y1="1482" x2="1610" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1617" y1="1482" x2="1627" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1634" y1="1482" x2="1644" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1651" y1="1482" x2="1661" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1668" y1="1482" x2="1678" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1685" y1="1482" x2="1695" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1702" y1="1482" x2="1712" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1719" y1="1482" x2="1729" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1736" y1="1482" x2="1746" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1753" y1="1482" x2="1763" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1770" y1="1482" x2="1780" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1787" y1="1482" x2="1797" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1804" y1="1482" x2="1814" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1821" y1="1482" x2="1831" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1838" y1="1482" x2="1848" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1855" y1="1482" x2="1865" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1872" y1="1482" x2="1882" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1889" y1="1482" x2="1899" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1906" y1="1482" x2="1916" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1923" y1="1482" x2="1933" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1940" y1="1482" x2="1950" y2="1482" stroke="#8A949D" stroke-width="2"/>
+<line x1="1600" y1="1381" x2="1600" y2="1391" stroke="#8A949D" stroke-width="2"/>
+<line x1="1600" y1="1398" x2="1600" y2="1408" stroke="#8A949D" stroke-width="2"/>
+<line x1="1600" y1="1415" x2="1600" y2="1425" stroke="#8A949D" stroke-width="2"/>
+<line x1="1600" y1="1432" x2="1600" y2="1442" stroke="#8A949D" stroke-width="2"/>
+<line x1="1600" y1="1449" x2="1600" y2="1459" stroke="#8A949D" stroke-width="2"/>
+<line x1="1600" y1="1466" x2="1600" y2="1476" stroke="#8A949D" stroke-width="2"/>
+<line x1="1956" y1="1381" x2="1956" y2="1391" stroke="#8A949D" stroke-width="2"/>
+<line x1="1956" y1="1398" x2="1956" y2="1408" stroke="#8A949D" stroke-width="2"/>
+<line x1="1956" y1="1415" x2="1956" y2="1425" stroke="#8A949D" stroke-width="2"/>
+<line x1="1956" y1="1432" x2="1956" y2="1442" stroke="#8A949D" stroke-width="2"/>
+<line x1="1956" y1="1449" x2="1956" y2="1459" stroke="#8A949D" stroke-width="2"/>
+<line x1="1956" y1="1466" x2="1956" y2="1476" stroke="#8A949D" stroke-width="2"/>
+<text x="1778" y="1421" font-family="Arial" font-size="25" font-weight="normal" fill="#172B3D" text-anchor="middle">Calibrated optical data</text>
+<text x="1778" y="1456" font-family="Arial" font-size="25" font-weight="normal" fill="#172B3D" text-anchor="middle">and spectral emission</text>
+<text x="44" y="1533" font-family="Arial" font-size="27" font-weight="bold" fill="#394D5C" text-anchor="start">* Figures 5–6: radial pressure and event-energy updates require correction and convergence tests.</text>
+<text x="44" y="1575" font-family="Arial" font-size="27" font-weight="normal" fill="#52616E" text-anchor="start">Implemented components describe code structure and do not establish physical validation.</text>
+</svg>

@@ -1,0 +1,71 @@
+{
+  "successful": true,
+  "checks": [
+    {
+      "check": "Manuscript image provenance",
+      "status": "PASS",
+      "detail": "All 14 exact manuscript image files match their recorded hashes."
+    },
+    {
+      "check": "Equation inventory",
+      "status": "PASS",
+      "detail": "All 108 native Office Math XML expressions are preserved and parse."
+    },
+    {
+      "check": "Figure rendering",
+      "status": "PASS",
+      "detail": "Every numbered manuscript figure has a readable regenerated PNG."
+    },
+    {
+      "check": "Original Figure 2 states",
+      "status": "PASS",
+      "detail": "Every archived array reproduced within 1e-10 of its peak scale."
+    },
+    {
+      "check": "Original Figure 3 states",
+      "status": "PASS",
+      "detail": "Every archived array reproduced within 1e-10 of its peak scale."
+    },
+    {
+      "check": "Original Figure 4 states",
+      "status": "PASS",
+      "detail": "Every archived array reproduced within 1e-10 of its peak scale."
+    },
+    {
+      "check": "Original ensemble 5 returned arrays",
+      "status": "PASS",
+      "detail": "Every archived array reproduced within 1e-10 of its peak scale."
+    },
+    {
+      "check": "Original ensemble 6 returned arrays",
+      "status": "PASS",
+      "detail": "Every archived array reproduced within 1e-10 of its peak scale."
+    },
+    {
+      "check": "Submitted Figure 4 interpretation",
+      "status": "PASS",
+      "detail": "Eight first-update flags and camera maximum 0.0028; source version unchanged."
+    },
+    {
+      "check": "Historical source controls",
+      "status": "PASS",
+      "detail": "Source hashes, equilibrium check, refinement records and saved controls pass their original verifier."
+    },
+    {
+      "check": "Tables 2\u20137",
+      "status": "PASS",
+      "detail": "Calculated counts, growth slopes/intervals, extrema and control quantities agree at manuscript precision; energy residuals pass the stated tolerance."
+    },
+    {
+      "check": "Corrected numerical ledgers",
+      "status": "PASS",
+      "detail": "26 ensemble and eight phase cases complete within the declared energy-ledger tolerance."
+    },
+    {
+      "check": "Independent radial benchmark",
+      "status": "PASS",
+      "detail": "Finite-radius Rayleigh relative time error 9.51e-12."
+    }
+  ],
+  "scope": "Numerical reproduction and verification, not experimental plasma validation."
+}

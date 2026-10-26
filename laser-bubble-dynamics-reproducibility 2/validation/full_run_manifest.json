@@ -1,0 +1,9 @@
+{
+  "mode": "full",
+  "figure": null,
+  "figure4_rerun": true,
+  "elapsed_s": 160.03976559638977,
+  "python": "3.12.14",
+  "successful": true,
+  "scope": "Numerical reproduction and verification; no experimental plasma/flash validation claimed."
+}

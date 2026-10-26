@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript and this version of its reproduction code when using the calculations."
+type: software
+title: "Laser Bubble Dynamics Reproducibility Code and Data"
+version: 0.1.0
+date-released: 2026-10-26
+authors:
+  - family-names: Crogman
+    given-names: Horace T.
+  - family-names: Hall
+    given-names: Rashad
+  - family-names: Dang
+    given-names: To
+  - family-names: Alvarez
+    given-names: Gisela
+  - family-names: Rojas
+    given-names: Lizeth
+  - family-names: Erenso
+    given-names: Daniel
+abstract: "Source algorithms, experimental diameter data, corrected numerical models, phase-change calculations, figure reproduction and verification for the manuscript Laser-Driven Bubble Dynamics and Optical-Emission Proxies: Numerical Verification and Experimental Growth Characterization. No repository DOI or publication DOI is assigned in this package."
+keywords:
+  - bubble dynamics
+  - numerical verification
+  - reproducibility
+  - phase change
+  - experimental growth

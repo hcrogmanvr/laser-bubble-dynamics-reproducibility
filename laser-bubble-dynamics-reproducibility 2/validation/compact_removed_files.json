@@ -1,0 +1,382 @@
+[
+  {
+    "path": "components/corrected_models/figures/Figure12_corrected_ensembles.pdf",
+    "compressed_bytes": 97785
+  },
+  {
+    "path": "components/corrected_models/figures/Figure12_corrected_ensembles.png",
+    "compressed_bytes": 397243
+  },
+  {
+    "path": "components/corrected_models/figures/Figure13_phase_change_controls.pdf",
+    "compressed_bytes": 52992
+  },
+  {
+    "path": "components/corrected_models/figures/Figure13_phase_change_controls.png",
+    "compressed_bytes": 317445
+  },
+  {
+    "path": "components/corrected_models/figures/FigureS1_reference_and_optical_checks.pdf",
+    "compressed_bytes": 17967
+  },
+  {
+    "path": "components/corrected_models/figures/FigureS1_reference_and_optical_checks.png",
+    "compressed_bytes": 94489
+  },
+  {
+    "path": "components/corrected_models/results/absorption_high.npz",
+    "compressed_bytes": 189100
+  },
+  {
+    "path": "components/corrected_models/results/absorption_low.npz",
+    "compressed_bytes": 105400
+  },
+  {
+    "path": "components/corrected_models/results/accommodation_high.npz",
+    "compressed_bytes": 135549
+  },
+  {
+    "path": "components/corrected_models/results/accommodation_low.npz",
+    "compressed_bytes": 130755
+  },
+  {
+    "path": "components/corrected_models/results/figure5_coupling_off.npz",
+    "compressed_bytes": 1581993
+  },
+  {
+    "path": "components/corrected_models/results/figure5_drude_off.npz",
+    "compressed_bytes": 1624984
+  },
+  {
+    "path": "components/corrected_models/results/figure6_coupling_off.npz",
+    "compressed_bytes": 2113697
+  },
+  {
+    "path": "components/corrected_models/results/figure6_drude_off.npz",
+    "compressed_bytes": 1899095
+  },
+  {
+    "path": "components/historical_single/figures/continuous_reference.png",
+    "compressed_bytes": 59744
+  },
+  {
+    "path": "components/historical_single/figures/discrete_controls.png",
+    "compressed_bytes": 107691
+  },
+  {
+    "path": "components/historical_single/figures/mechanism_controls.png",
+    "compressed_bytes": 120405
+  },
+  {
+    "path": "components/original_figure4/results/Figure4_author_source.pdf",
+    "compressed_bytes": 17660
+  },
+  {
+    "path": "components/original_figure4/results/Figure4_author_source.png",
+    "compressed_bytes": 177795
+  },
+  {
+    "path": "components/original_figure4/results/Figure4_author_source.svg",
+    "compressed_bytes": 15850
+  },
+  {
+    "path": "outputs/calculations/reference_quantities.csv",
+    "compressed_bytes": 1020
+  },
+  {
+    "path": "outputs/calculations/reference_quantities.json",
+    "compressed_bytes": 1112
+  },
+  {
+    "path": "outputs/figures/Figure1.pdf",
+    "compressed_bytes": 478435
+  },
+  {
+    "path": "outputs/figures/Figure1.png",
+    "compressed_bytes": 263760
+  },
+  {
+    "path": "outputs/figures/Figure1.svg",
+    "compressed_bytes": 5084
+  },
+  {
+    "path": "outputs/figures/Figure10.pdf",
+    "compressed_bytes": 11439
+  },
+  {
+    "path": "outputs/figures/Figure10.png",
+    "compressed_bytes": 59744
+  },
+  {
+    "path": "outputs/figures/Figure10.svg",
+    "compressed_bytes": 8883
+  },
+  {
+    "path": "outputs/figures/Figure11.pdf",
+    "compressed_bytes": 14812
+  },
+  {
+    "path": "outputs/figures/Figure11.png",
+    "compressed_bytes": 120405
+  },
+  {
+    "path": "outputs/figures/Figure11.svg",
+    "compressed_bytes": 11523
+  },
+  {
+    "path": "outputs/figures/Figure12_corrected_ensembles.pdf",
+    "compressed_bytes": 97785
+  },
+  {
+    "path": "outputs/figures/Figure12_corrected_ensembles.png",
+    "compressed_bytes": 397243
+  },
+  {
+    "path": "outputs/figures/Figure13_phase_change_controls.pdf",
+    "compressed_bytes": 52992
+  },
+  {
+    "path": "outputs/figures/Figure13_phase_change_controls.png",
+    "compressed_bytes": 317445
+  },
+  {
+    "path": "outputs/figures/Figure2.pdf",
+    "compressed_bytes": 117741
+  },
+  {
+    "path": "outputs/figures/Figure2.png",
+    "compressed_bytes": 169347
+  },
+  {
+    "path": "outputs/figures/Figure2.svg",
+    "compressed_bytes": 97825
+  },
+  {
+    "path": "outputs/figures/Figure3.pdf",
+    "compressed_bytes": 108286
+  },
+  {
+    "path": "outputs/figures/Figure3.png",
+    "compressed_bytes": 234521
+  },
+  {
+    "path": "outputs/figures/Figure3.svg",
+    "compressed_bytes": 100993
+  },
+  {
+    "path": "outputs/figures/Figure4.pdf",
+    "compressed_bytes": 22901
+  },
+  {
+    "path": "outputs/figures/Figure4.png",
+    "compressed_bytes": 148593
+  },
+  {
+    "path": "outputs/figures/Figure4.svg",
+    "compressed_bytes": 9963
+  },
+  {
+    "path": "outputs/figures/Figure5.pdf",
+    "compressed_bytes": 50195
+  },
+  {
+    "path": "outputs/figures/Figure5.png",
+    "compressed_bytes": 364051
+  },
+  {
+    "path": "outputs/figures/Figure5.svg",
+    "compressed_bytes": 37216
+  },
+  {
+    "path": "outputs/figures/Figure6.pdf",
+    "compressed_bytes": 53461
+  },
+  {
+    "path": "outputs/figures/Figure6.png",
+    "compressed_bytes": 400119
+  },
+  {
+    "path": "outputs/figures/Figure6.svg",
+    "compressed_bytes": 39628
+  },
+  {
+    "path": "outputs/figures/Figure7.pdf",
+    "compressed_bytes": 9880
+  },
+  {
+    "path": "outputs/figures/Figure7.png",
+    "compressed_bytes": 23094
+  },
+  {
+    "path": "outputs/figures/Figure7.svg",
+    "compressed_bytes": 1907
+  },
+  {
+    "path": "outputs/figures/Figure8A.pdf",
+    "compressed_bytes": 15965
+  },
+  {
+    "path": "outputs/figures/Figure8A.png",
+    "compressed_bytes": 86405
+  },
+  {
+    "path": "outputs/figures/Figure8A.svg",
+    "compressed_bytes": 3825
+  },
+  {
+    "path": "outputs/figures/Figure8B.pdf",
+    "compressed_bytes": 23277
+  },
+  {
+    "path": "outputs/figures/Figure8B.png",
+    "compressed_bytes": 111686
+  },
+  {
+    "path": "outputs/figures/Figure8B.svg",
+    "compressed_bytes": 9744
+  },
+  {
+    "path": "outputs/figures/Figure9.pdf",
+    "compressed_bytes": 13581
+  },
+  {
+    "path": "outputs/figures/Figure9.png",
+    "compressed_bytes": 107691
+  },
+  {
+    "path": "outputs/figures/Figure9.svg",
+    "compressed_bytes": 10579
+  },
+  {
+    "path": "outputs/figures/FigureS1_reference_and_optical_checks.pdf",
+    "compressed_bytes": 17967
+  },
+  {
+    "path": "outputs/figures/FigureS1_reference_and_optical_checks.png",
+    "compressed_bytes": 94489
+  },
+  {
+    "path": "outputs/logs/calculated_tables.log",
+    "compressed_bytes": 93
+  },
+  {
+    "path": "outputs/logs/continuous_sources_recheck.log",
+    "compressed_bytes": 2
+  },
+  {
+    "path": "outputs/logs/control_figures_9_to_11.log",
+    "compressed_bytes": 2
+  },
+  {
+    "path": "outputs/logs/corrected_figures.log",
+    "compressed_bytes": 2
+  },
+  {
+    "path": "outputs/logs/corrected_models_all_cases.log",
+    "compressed_bytes": 539
+  },
+  {
+    "path": "outputs/logs/historical_density_observer.log",
+    "compressed_bytes": 614
+  },
+  {
+    "path": "outputs/logs/historical_ensemble_coupling.log",
+    "compressed_bytes": 834
+  },
+  {
+    "path": "outputs/logs/historical_ensemble_defaults.log",
+    "compressed_bytes": 449
+  },
+  {
+    "path": "outputs/logs/historical_single_controls.log",
+    "compressed_bytes": 312
+  },
+  {
+    "path": "outputs/logs/original_figure4.log",
+    "compressed_bytes": 761
+  },
+  {
+    "path": "outputs/logs/paper_figures_1_to_8.log",
+    "compressed_bytes": 47
+  },
+  {
+    "path": "outputs/logs/reference_calculations.log",
+    "compressed_bytes": 77
+  },
+  {
+    "path": "outputs/logs/verification.log",
+    "compressed_bytes": 254
+  },
+  {
+    "path": "outputs/plotted_data/Figure2.csv.gz",
+    "compressed_bytes": 751977
+  },
+  {
+    "path": "outputs/plotted_data/Figure2_full_arrays.npz",
+    "compressed_bytes": 426802
+  },
+  {
+    "path": "outputs/plotted_data/Figure3.csv.gz",
+    "compressed_bytes": 1578109
+  },
+  {
+    "path": "outputs/plotted_data/Figure3_full_arrays.npz",
+    "compressed_bytes": 1187659
+  },
+  {
+    "path": "outputs/plotted_data/Figure4.csv.gz",
+    "compressed_bytes": 470108
+  },
+  {
+    "path": "outputs/plotted_data/Figure5.csv.gz",
+    "compressed_bytes": 111635
+  },
+  {
+    "path": "outputs/plotted_data/Figure6.csv.gz",
+    "compressed_bytes": 143481
+  },
+  {
+    "path": "outputs/plotted_data/Figure7.csv.gz",
+    "compressed_bytes": 8058
+  },
+  {
+    "path": "outputs/plotted_data/growth_fit_summary.csv",
+    "compressed_bytes": 364
+  },
+  {
+    "path": "outputs/plotted_data/growth_points.csv",
+    "compressed_bytes": 2616
+  },
+  {
+    "path": "outputs/run_manifest.json",
+    "compressed_bytes": 171
+  },
+  {
+    "path": "outputs/tables/Table2_calculated.csv",
+    "compressed_bytes": 359
+  },
+  {
+    "path": "outputs/tables/Table3_calculated.csv",
+    "compressed_bytes": 185
+  },
+  {
+    "path": "outputs/tables/Table4_calculated.csv",
+    "compressed_bytes": 216
+  },
+  {
+    "path": "outputs/tables/Table5_calculated.csv",
+    "compressed_bytes": 232
+  },
+  {
+    "path": "outputs/tables/Table6_calculated.csv",
+    "compressed_bytes": 304
+  },
+  {
+    "path": "outputs/tables/Table7_calculated.csv",
+    "compressed_bytes": 382
+  },
+  {
+    "path": "outputs/verification.json",
+    "compressed_bytes": 730
+  }
+]

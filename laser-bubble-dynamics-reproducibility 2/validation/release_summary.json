@@ -1,0 +1,12 @@
+{
+  "main_figure_images": 14,
+  "regenerated_main_figures": 14,
+  "additional_check_figures": 1,
+  "numbered_tables": 7,
+  "native_formula_fragments": 108,
+  "original_figure4_source_sha256": "a424560ba06d8bd09af659a2f8149f04cd0b4115f54b529a0ab63c54edbc87bd",
+  "full_pipeline_passed": true,
+  "elapsed_full_pipeline_s": 160.03976559638977,
+  "figure7_provenance": "Source-derived flag redraw supplied; original image history remains explicitly qualified.",
+  "online_repository": "Not created; local repository and upload-ready artifacts only."
+}
