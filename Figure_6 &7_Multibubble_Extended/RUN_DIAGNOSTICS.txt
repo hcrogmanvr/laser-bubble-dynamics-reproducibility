@@ -1,0 +1,17 @@
+Figure 6: Original supplied model, unmodified.
+Simulation duration: 1.0 ms
+Integration dt: 1.0e-7 s
+Number of bubbles: 8
+Total model-triggered bursts: 79
+Saved time samples: 2001
+Final ruptured fraction: 0.625
+Peak mean radius (um): 0.204299
+Peak mean Te (K): 11616
+Peak modeled overpressure (MPa): 6.66314
+Peak camera response (arb): 2
+Max modeled mass/accretion state: 10
+Max mean ionization fraction: 0.242673
+Maximum accumulated pressure impulse (Pa s): 3061.1
+Caveats: The model uses bounded acceleration, velocity and radius; parameterized EOS, rupture and emission thresholds; camera saturates at 2 arbitrary units.
+Event flags are stored only at stride=5, so the saved burst_flag cannot recover all per-step events.
+No changes were made to the source model equations or parameters.

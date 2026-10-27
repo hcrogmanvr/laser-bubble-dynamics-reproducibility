@@ -1,0 +1,17 @@
+Figure 5: original supplied code reproduced without parameter or equation changes
+Inputs: N=8, t_end=0.001 s, dt=1e-7 s, stride=5, seed=2
+Total burst events (all simulation steps): 96
+Stored points: 2001
+Recorded/downsampled burst flags: 30
+Mean bubble radius range (um): 0.120151391 to 0.184317277
+Mean electron temperature range (K): 301.542599 to 11523.6093
+Mean pressure range (MPa): 0.0707048275 to 4.60157854
+Maximum camera signal (arb): 2
+Fraction of stored camera points at sensor saturation=2.0: 1.4993%
+
+CAUTIONS:
+- Ionization fraction is a logistic proxy, not a calibrated Saha/CR model.
+- Pressure is capped; radius and radial speed have numerical clamps.
+- Burst triggering and conversion to camera signal are phenomenological.
+- Burst flags are downsampled; total burst count uses every simulation step.
+- The presented figure reproduces the supplied code; this does not establish physical validation.

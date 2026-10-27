@@ -1,0 +1,6 @@
+Unmodified model parameters; export code changes only plotting/saving.
+Total bursts: 8
+Number of event time steps: 1
+Mean radius range (um): 0.05 to 0.18
+Camera max (arb): 0.0028
+Pressure max (MPa): 0.00584320444
