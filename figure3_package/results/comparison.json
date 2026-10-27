@@ -1,0 +1,25 @@
+{
+  "assumed_tau0": 1.0,
+  "assumed_volume_gain": 1.0,
+  "zero_growth_regression": "All 11 original state arrays match exactly",
+  "max_absolute_changes": {
+    "R": 5.0513606355533184e-08,
+    "v": 0.0,
+    "E": 0.0,
+    "Te": 0.0,
+    "P": 508611370.7808337,
+    "burst_flag": 0.0,
+    "E_burst": 0.0,
+    "I_flash": 0.0,
+    "pressure_impulse": 806246885.8828125,
+    "m_np": 0.0,
+    "rupture": 0.0
+  },
+  "baseline_bursts": 577,
+  "updated_bursts": 577,
+  "R_floor_initial_um": 0.39999999999999997,
+  "R_floor_final_um": 0.44974038683485956,
+  "radius_bound_fraction": 1.0,
+  "velocity_clip_fraction": 1.0,
+  "pressure_cap_fraction": 0.8842294743158106
+}
