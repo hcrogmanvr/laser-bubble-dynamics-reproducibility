@@ -1,0 +1,35 @@
+{
+  "burst_count": 577,
+  "first_burst_times_s": [
+    0.02,
+    0.54,
+    1.06,
+    1.58,
+    2.1,
+    2.62,
+    3.14,
+    3.66,
+    4.18,
+    4.7
+  ],
+  "emitted_energy_proxy": 1.5625806699437348,
+  "lower_bound_fraction": 0.49996666666666667,
+  "upper_bound_fraction": 0.5,
+  "off_phase_minima_um": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "camera_boxcar_samples": 1,
+  "optics_generated": false,
+  "r_sat_m": null,
+  "n": null,
+  "chi_source": null,
+  "limitations": [
+    "Original explicit mechanics and clipping preserved; numerical convergence unverified.",
+    "dt=10 ms does not resolve 2-ms flash decay or 5-ms camera exposure.",
+    "Energy and optical signal remain proxies; no joule or watt calibration supplied.",
+    "Optics is postprocessing, not a coupled absorption-feedback model.",
+    "Off-phase minima are measured from R(t), not imposed as a growth law."
+  ]
+}
