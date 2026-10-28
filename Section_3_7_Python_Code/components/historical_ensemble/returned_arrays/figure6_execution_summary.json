@@ -1,0 +1,21 @@
+{
+  "source_sha256": "a5d86489f8f8b96747ec494d7ac54a741ebcbf826a8e8fab0496e39849d04b6d",
+  "settings": {
+    "N": 8,
+    "t_end": 0.001,
+    "dt": 1e-07,
+    "stride": 5,
+    "seed": 2,
+    "cluster_sigma": 2e-06
+  },
+  "returned_scalars": {
+    "total_bursts": 79,
+    "runtime_s": 1.0005507469177246
+  },
+  "all_returned_arrays_finite": true,
+  "stored_samples": 2001,
+  "maximum_stored_mean_Te_K": 11615.979558690095,
+  "minimum_stored_mean_radius_m": 1.1407554588774613e-07,
+  "maximum_stored_mean_radius_m": 2.0429888634356856e-07,
+  "final_ruptured_fraction": 0.625
+}

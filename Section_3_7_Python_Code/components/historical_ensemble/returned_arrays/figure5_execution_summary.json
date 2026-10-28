@@ -1,0 +1,18 @@
+{
+  "source_sha256": "6f6f677e264b73695bf6c07d4f978fe45f3d8b665b57198e510dd164b0808bf6",
+  "settings": {
+    "N": 8,
+    "t_end": 0.001,
+    "dt": 1e-07,
+    "stride": 5,
+    "seed": 2
+  },
+  "returned_scalars": {
+    "total_bursts": 96
+  },
+  "all_returned_arrays_finite": true,
+  "stored_samples": 2001,
+  "maximum_stored_mean_Te_K": 11523.609337876005,
+  "minimum_stored_mean_radius_m": 1.2015139104089442e-07,
+  "maximum_stored_mean_radius_m": 1.8431727725185696e-07
+}

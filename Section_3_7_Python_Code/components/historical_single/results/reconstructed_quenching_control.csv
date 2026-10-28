@@ -1,0 +1,3 @@
+scope,quench_strength,duration_s,dt_s,E_final_nominal_J,events,absorbed_energy_nominal_J,R_final_um,pressure_cap_sample_fraction
+Archived reconstruction only,0.0,1.0,0.0001,0.24522842177123003,0,0.429571593035464,29.999999999999996,0.9999000099990001
+Archived reconstruction only,0.65,1.0,0.0001,0.08583044349310097,0,0.15035178824871032,29.999999999999996,0.9999000099990001

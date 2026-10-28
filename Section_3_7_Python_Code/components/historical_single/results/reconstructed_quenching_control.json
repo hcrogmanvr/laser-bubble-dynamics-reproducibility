@@ -1,0 +1,24 @@
+[
+  {
+    "scope": "Archived reconstruction only",
+    "quench_strength": 0.0,
+    "duration_s": 1.0,
+    "dt_s": 0.0001,
+    "E_final_nominal_J": 0.24522842177123003,
+    "events": 0,
+    "absorbed_energy_nominal_J": 0.429571593035464,
+    "R_final_um": 29.999999999999996,
+    "pressure_cap_sample_fraction": 0.9999000099990001
+  },
+  {
+    "scope": "Archived reconstruction only",
+    "quench_strength": 0.65,
+    "duration_s": 1.0,
+    "dt_s": 0.0001,
+    "E_final_nominal_J": 0.08583044349310097,
+    "events": 0,
+    "absorbed_energy_nominal_J": 0.15035178824871032,
+    "R_final_um": 29.999999999999996,
+    "pressure_cap_sample_fraction": 0.9999000099990001
+  }
+]

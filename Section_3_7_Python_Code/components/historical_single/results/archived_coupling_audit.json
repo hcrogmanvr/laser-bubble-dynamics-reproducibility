@@ -1,0 +1,17 @@
+{
+  "scope": "Archived reconstruction only",
+  "same_seed": 7,
+  "n_bubbles": 3,
+  "duration_s": 0.1,
+  "maximum_dynamic_state_differences": {
+    "R_um": 0.0,
+    "velocity_m_s": 0.0,
+    "energy_J": 0.0,
+    "temperature_K": 0.0,
+    "burst_J": 0.0,
+    "camera_flash": 0.0
+  },
+  "maximum_postprocessed_pressure_difference_Pa": 391894.0,
+  "spacing_parameter_present": false,
+  "coupling_enters_time_integration": false
+}

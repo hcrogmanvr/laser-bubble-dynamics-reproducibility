@@ -1,0 +1,22 @@
+{
+  "completed": [
+    "Source Figure 2/3 reproduction",
+    "Discrete-source timestep sweeps",
+    "Numerical-bound and cooldown sensitivity",
+    "Forcing and duty-cycle sweeps",
+    "Unclipped stiff integration of source force equations and refinement",
+    "Source Figure 3 optical-diagnostic null control",
+    "Quenching on/off in explicitly archived reconstruction",
+    "Archived coupling on/off and missing-spacing audit",
+    "New dynamic far-field pressure-coupling extension with spacing and refinement controls"
+  ],
+  "not_claimed": [
+    "Independent experimental flash validation",
+    "A converged repeat-collapse plasma regime",
+    "Quenching implemented in original Figure 2/3 energy equations",
+    "Recovery or validation of original manuscript Figures 4-6 dynamic coupling",
+    "A validated two-temperature EOS",
+    "Calibration of nominal energy coefficients to joules"
+  ],
+  "runtime_s": 31.66301131248474
+}

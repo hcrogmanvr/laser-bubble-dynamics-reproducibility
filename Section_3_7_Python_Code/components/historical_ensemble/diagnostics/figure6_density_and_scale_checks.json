@@ -1,0 +1,39 @@
+{
+  "source_sha256": "a5d86489f8f8b96747ec494d7ac54a741ebcbf826a8e8fab0496e39849d04b6d",
+  "observation_stage": "Immediately after the original Saha pressure evaluation, before radial advance and event-temperature kick; grid labels preserve original timing convention.",
+  "N_heavy_per_bubble": 335103.21638291125,
+  "critical_density_m3": 9.847700337883801e+26,
+  "critical_density_cm3": 9.847700337883801e+20,
+  "critical_density_definition": "cold collisionless vacuum plasma-frequency equality at 1064 nm; not a dielectric/collisional breakdown or reflectivity calculation",
+  "analytic_source_ne_upper_bound_m3": 6.4e+26,
+  "max_instantaneous_ne_m3": 2.9884707322995434e+25,
+  "max_instantaneous_ne_cm3": 2.9884707322995433e+19,
+  "max_ne_over_nc": 0.03034688942354377,
+  "max_grid_label_s": 0.0008481999999999999,
+  "bubble_index": 7,
+  "Te_at_max_ne_K": 28877.836837037114,
+  "R_at_max_ne_m": 1.3068586047655766e-07,
+  "pressure_evaluations": 10001,
+  "returned_arrays_bitwise_equal_to_archive": {
+    "t": true,
+    "R_mean": true,
+    "E_mean": true,
+    "P_over_MPa": true,
+    "Te_mean": true,
+    "I_cam": true,
+    "laser": true,
+    "burst_flag": true,
+    "xion_mean": true,
+    "M_mean": true,
+    "rupt_frac": true,
+    "final_ruptured": true,
+    "final_Jmem": true,
+    "final_Ppeak": true
+  },
+  "adiabatic_volume_ratio": 3.375,
+  "adiabatic_temperature_ratios": {
+    "gamma_1_4": 1.626707656796548,
+    "gamma_5_3": 2.25
+  },
+  "laplace_pressure_at_0_15_um_Pa": 960000.0
+}

@@ -1,0 +1,25 @@
+{
+  "original_sources": [
+    {
+      "file": "figure2_updated.py",
+      "sha256": "24c4823e1c8dc79e5291190212fa6140d72744681a238812376bc61f5a1a9eb0"
+    },
+    {
+      "file": "figure3_updated.py",
+      "sha256": "9fdabe57a62ba16482c3e032b4e9c198096218fe8e5559175b98026f84ea518b"
+    },
+    {
+      "file": "reconstructed_model.py",
+      "sha256": "06db1453de0fe54432962c5f1cdd6278ee0baac79d73ec405c4ff66a890b4b77"
+    }
+  ],
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "scopes": {
+    "legacy": "Parameter changes to the supplied discrete source equations; no physical convergence inferred.",
+    "continuous": "Unclipped spring-damping force equations from supplied Figure 2/3 sources, not Rayleigh-Plesset dynamics.",
+    "dynamic_coupling": "New explicitly documented far-field extension of source mechanical equations, not recovery of archived multi-bubble manuscript figures.",
+    "reconstructed": "Archived reconstruction; README explicitly states original source was not available when created."
+  }
+}

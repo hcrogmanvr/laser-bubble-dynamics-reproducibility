@@ -1,0 +1,180 @@
+{
+  "scope": "Conditional implementation audit at unchanged default timestep/seed/forcing. Original radial dimensional and event-energy defects are retained. No convergence or physical validation.",
+  "off_switch": "Figure 5: zero instantaneous coupling correction. Figure 6: zero instantaneous coupling correction and zero delayed-pulse amplitudes. All other equations/defaults unchanged.",
+  "event_observer": "Passive observation of original radial step; exact original crossing rule (old R > threshold, new R <= threshold, old v < 0), threshold 0.15 micrometer. Total observed triggers must equal original returned total_bursts.",
+  "phase_definition": "Between consecutive per-bubble events, phi_i=2*pi*(t-t_i_prev)/(t_i_next-t_i_prev). R_phi=abs(mean(exp(i*phi_i))). On/off use the same 0.1 microsecond grid over the intersection of valid bracketing intervals of every bubble in both cases; no-event/insufficient-event cases are undefined, not zero. Shared gating can also create phase coherence.",
+  "cases": [
+    {
+      "figure": 5,
+      "coupling": "on",
+      "events": 96,
+      "event_counts_per_bubble": [
+        19,
+        20,
+        18,
+        0,
+        0,
+        0,
+        18,
+        21
+      ],
+      "peak_stored_mean_Te_K": 11523.609337876005,
+      "peak_stored_mean_pressure_MPa": 4.601578537757599,
+      "mean_radius_peak_um": 0.18431727725185695,
+      "final_flag_fraction": null,
+      "source_sha256": "6f6f677e264b73695bf6c07d4f978fe45f3d8b665b57198e510dd164b0808bf6",
+      "default_returned_arrays_equal_to_archive": {
+        "t": true,
+        "R_mean": true,
+        "E_mean": true,
+        "P_mean_MPa": true,
+        "Te_mean": true,
+        "I_cam": true,
+        "laser": true,
+        "burst_flag": true
+      },
+      "event_phase_coherence_mean": null,
+      "phase_window_s": null,
+      "phase_grid_points": 0,
+      "active_bubble_indices": [
+        0,
+        1,
+        2,
+        6,
+        7
+      ],
+      "active_phase_coherence_mean": 0.32996426718176186,
+      "active_phase_window_s": [
+        1.2499999999999999e-05,
+        0.0009461999999999999
+      ],
+      "active_phase_grid_points": 9338
+    },
+    {
+      "figure": 5,
+      "coupling": "off",
+      "events": 109,
+      "event_counts_per_bubble": [
+        22,
+        22,
+        21,
+        0,
+        0,
+        0,
+        22,
+        22
+      ],
+      "peak_stored_mean_Te_K": 14368.346225649628,
+      "peak_stored_mean_pressure_MPa": 5.821488811064202,
+      "mean_radius_peak_um": 0.18186347268670072,
+      "final_flag_fraction": null,
+      "source_sha256": "6f6f677e264b73695bf6c07d4f978fe45f3d8b665b57198e510dd164b0808bf6",
+      "default_returned_arrays_equal_to_archive": {},
+      "event_phase_coherence_mean": null,
+      "phase_window_s": null,
+      "phase_grid_points": 0,
+      "active_bubble_indices": [
+        0,
+        1,
+        2,
+        6,
+        7
+      ],
+      "active_phase_coherence_mean": 0.9506561878279939,
+      "active_phase_window_s": [
+        1.2499999999999999e-05,
+        0.0009461999999999999
+      ],
+      "active_phase_grid_points": 9338
+    },
+    {
+      "figure": 6,
+      "coupling": "on",
+      "events": 79,
+      "event_counts_per_bubble": [
+        16,
+        16,
+        15,
+        0,
+        0,
+        0,
+        15,
+        17
+      ],
+      "peak_stored_mean_Te_K": 11615.979558690095,
+      "peak_stored_mean_pressure_MPa": 6.663144732946372,
+      "mean_radius_peak_um": 0.20429888634356855,
+      "final_flag_fraction": 0.625,
+      "source_sha256": "a5d86489f8f8b96747ec494d7ac54a741ebcbf826a8e8fab0496e39849d04b6d",
+      "default_returned_arrays_equal_to_archive": {
+        "t": true,
+        "R_mean": true,
+        "E_mean": true,
+        "P_over_MPa": true,
+        "Te_mean": true,
+        "I_cam": true,
+        "laser": true,
+        "burst_flag": true,
+        "xion_mean": true,
+        "M_mean": true,
+        "rupt_frac": true,
+        "final_ruptured": true,
+        "final_Jmem": true,
+        "final_Ppeak": true
+      },
+      "event_phase_coherence_mean": null,
+      "phase_window_s": null,
+      "phase_grid_points": 0,
+      "active_bubble_indices": [
+        0,
+        1,
+        2,
+        6,
+        7
+      ],
+      "active_phase_coherence_mean": 0.420610981299613,
+      "active_phase_window_s": [
+        1.2499999999999999e-05,
+        0.0009513
+      ],
+      "active_phase_grid_points": 9389
+    },
+    {
+      "figure": 6,
+      "coupling": "off",
+      "events": 90,
+      "event_counts_per_bubble": [
+        18,
+        18,
+        18,
+        0,
+        0,
+        0,
+        18,
+        18
+      ],
+      "peak_stored_mean_Te_K": 13973.315640478137,
+      "peak_stored_mean_pressure_MPa": 5.420447069246787,
+      "mean_radius_peak_um": 0.19569837461965844,
+      "final_flag_fraction": 0.625,
+      "source_sha256": "a5d86489f8f8b96747ec494d7ac54a741ebcbf826a8e8fab0496e39849d04b6d",
+      "default_returned_arrays_equal_to_archive": {},
+      "event_phase_coherence_mean": null,
+      "phase_window_s": null,
+      "phase_grid_points": 0,
+      "active_bubble_indices": [
+        0,
+        1,
+        2,
+        6,
+        7
+      ],
+      "active_phase_coherence_mean": 0.8621872319414308,
+      "active_phase_window_s": [
+        1.2499999999999999e-05,
+        0.0009513
+      ],
+      "active_phase_grid_points": 9389
+    }
+  ]
+}

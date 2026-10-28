@@ -1,0 +1,14 @@
+[
+  {
+    "source_upload": "upload/Pasted text(1).txt",
+    "archived_file": "source_originals/figure5_two_reservoir_original.py",
+    "sha256": "6f6f677e264b73695bf6c07d4f978fe45f3d8b665b57198e510dd164b0808bf6",
+    "byte_count": 14422
+  },
+  {
+    "source_upload": "upload/Pasted text.txt",
+    "archived_file": "source_originals/figure6_extended_original.py",
+    "sha256": "a5d86489f8f8b96747ec494d7ac54a741ebcbf826a8e8fab0496e39849d04b6d",
+    "byte_count": 18523
+  }
+]
