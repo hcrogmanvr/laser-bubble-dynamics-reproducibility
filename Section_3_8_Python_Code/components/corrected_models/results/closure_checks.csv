@@ -1,0 +1,9 @@
+test,rtol,time_numeric_us,time_exact_us,relative_time_error,max_energy_invariant_error,cutoff_R_over_R0,max_absolute_fraction_error,species,max_fraction_sum_error,min_fraction,vacuum_R,vacuum_T,vacuum_A,max_temperature_error_K,relative_internal_energy_drift,removed_J,absolute_energy_residual_J,relative_residual,p_triple_Pa,p_critical_Pa
+Rayleigh finite-radius benchmark,1e-05,2.699877631945865,2.6998775704502034,2.277720345666978e-08,3.458300549707971e-05,0.2,,,,,,,,,,,,,,
+Rayleigh finite-radius benchmark,1e-07,2.699877573230137,2.6998775704502034,1.0296516972374548e-09,4.803910551576251e-07,0.2,,,,,,,,,,,,,,
+Rayleigh finite-radius benchmark,1e-09,2.6998775704245204,2.6998775704502034,9.512501897290804e-12,4.618900040220808e-09,0.2,,,,,,,,,,,,,,
+Hydrogen Saha algebra against 70-digit arithmetic,,,,,,,1.6653345369377348e-15,hydrogen benchmark only; ensemble retains effective 12.6 eV,,,,,,,,,,,,
+Drude optical budget,,,,,,,,,1.1102230246251565e-16,0.0,0.0,1.0,0.0,,,,,,,
+Two-reservoir exchange exact solution,,,,,,,,,,,,,,1.9622348190750927e-10,1.4705433112053822e-15,,,,,
+Hot-state event energy removal,,,,,,,,,,,,,,,,5.358509382659606e-08,-1.9852334701272664e-23,3.704824100059575e-16,,
+IAPWS saturation endpoints,,,,,,,,,,,,,,,,,,,611.6570697405119,22064000.0

@@ -1,0 +1,8 @@
+{
+  "seconds": 98.12776112556458,
+  "python": "3.12.14",
+  "ensemble_cases": 26,
+  "phase_cases": 8,
+  "checks": 8,
+  "experimental_flash_comparison": "Outside study scope: prescribed optical proxies, with no calibrated flash trace, response function or spectrum in supplied records."
+}
