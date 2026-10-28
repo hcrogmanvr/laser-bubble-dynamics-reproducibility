@@ -1,0 +1,6 @@
+{
+  "source_package": "Section_3_8_Python_Code_and_Verification_Data.zip",
+  "unchanged_solver_sha256": "e8023d8451b62125dfff4bb472de2be84942dbcc3497fef0b4d43b20e34c287a",
+  "runner": "phase-only extraction of refresh_phase.py with local imports and identical case definitions",
+  "plot": "phase-change panel block extracted from make_figures.py"
+}

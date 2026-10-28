@@ -1,0 +1,26 @@
+[
+  {
+    "max_step_us": 0.08,
+    "rtol": 1e-06,
+    "final_radius_error_nm": 1.2047688421976815e-07,
+    "final_vapor_mass_relative_error": 7.068789997788372e-12,
+    "peak_wall_temperature_difference_K": 1.6942180991463829e-09,
+    "energy_residual_relative": 2.955116726427252e-12
+  },
+  {
+    "max_step_us": 0.04,
+    "rtol": 1e-07,
+    "final_radius_error_nm": 2.766240199143094e-08,
+    "final_vapor_mass_relative_error": 2.896016759734721e-12,
+    "peak_wall_temperature_difference_K": 2.35320385399973e-09,
+    "energy_residual_relative": 6.604741673422661e-13
+  },
+  {
+    "max_step_us": 0.02,
+    "rtol": 1e-08,
+    "final_radius_error_nm": 0.0,
+    "final_vapor_mass_relative_error": 0.0,
+    "peak_wall_temperature_difference_K": 0.0,
+    "energy_residual_relative": 9.926616580626457e-14
+  }
+]
